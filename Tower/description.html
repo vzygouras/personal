@@ -1,0 +1,260 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<title>CS 307 Final Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="https://cs.wellesley.edu/~cs307/threejs/libs/three.min.js"></script>
+<script src="https://cs.wellesley.edu/~cs307/threejs/libs/OrbitControls.js"></script>
+<script src="https://cs.wellesley.edu/~cs307/threejs/libs/tw.js"></script>
+<script src="vzygourasEiffelTower.js"></script>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+
+    <a href="#home" class="w3-bar-item w3-button"><b>CS 307</b> Viki Zygouras and Hannah Yi</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="demo.html" class="w3-bar-item w3-button">Demo</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="scene.png" alt="Scene" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"> <p></p>
+      <p></p> <p></p><span class="w3-hide-small w3-text-light-grey">CS 307: Final Project</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+
+  <!-- About Section -->
+
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p> Bonjour! This project was inspired by the famous iron architectural structure in Paris -
+      better known as the Eiffel Tower. The Eiffel Tower is placed in front of a sunset backdrop that
+      can be controlled to set below the horizon. A twinkling lightshow follows the sunsetting
+       to complete the experience.
+    </p>
+    <p>Before:<br>
+
+
+      <style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+    <img src="iter3_before.png" alt="before" class = "center" width = 800px ><br><br>
+    <p>After:<br>
+    <img src="iter3_after.png" alt="after" class = "center" width = 800px ><br><br>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eiffel Tower</h3>
+    <p>The Eiffel Tower was implemented with lathe, box, sphere, cylinder, and wireframe geometries.
+      To build the tower, programming was completed in stages corresponding with the upper, middle,
+      and lower components of the landmark. The iconic structure of the Eiffel Tower was challenging
+      to replicate because of its smooth curves yet rigid composition. A balance was achieved by combining
+      traditional geometries with curved and unique polygons. The upper parts of the tower include a
+      rectangular spire, segmented sphere dome, hexagonal platform, and central lathe wireframe. Code for the
+      lathe geometries was adapted from our in-class
+      <a href = "https://cs.wellesley.edu/~cs307/lectures/17-exercises/coke-better.html">example</a>.
+      These materials were positioned and sized accordingly to mimic the dimensions of the tower. The lathe
+      wireframe at the center of focus is created from two different Bezier curves each with four control points.
+      As there is some repetition in the shape of the curved supports, this pattern was used throughout the design
+      as seen in the shape of the legs. The center of the tower is made up of four legs and two supports – one
+      wireframe and one solid box geometry. The legs are also lathe geometries, however, made with one Bezier
+      curve and segmented by four to create the curving rectangular shape. The lower portion of the tower mimics
+      the middle’s legs and supports with minor changes. The legs of the base had to be rotated in the x and z
+      axis directions.
+      Additionally, an arch support had be added between the gaps of every base support. This arch is a modified
+      trapezoid with a quadratic curve base. In the final stage of the scene, after the sun sets, a lightshow
+      on the tower occurs as is tradition in Paris. This animation is made from blocks of randomly positioned
+      points that will either change their y position up or down in periods corresponding to the clock.
+      Once their position of y reaches a certain threshold the animation stops, and the tower is left with its
+      lights shining bright.
+      The design of this animation was inspired by and adapted from our snow globe class
+       <a href = "https://cs.wellesley.edu/~cs307/lectures/24-exercises/snowTown.html">example</a>.
+
+      <style>
+        canvas {
+              padding: 0;
+              margin: auto;
+              display: block;
+              width: 400px;
+              height: 400px;
+              position: absolute;
+              top: 4475px;
+              bottom: 0;
+              left: 0;
+              right: 0;
+          }
+      </style>
+
+      <script>
+      var scene = new THREE.Scene();
+      var renderer = new THREE.WebGLRenderer();
+      TW.mainInit(renderer,scene);
+
+      scene.add(zygourasEiffelTower(0x151414 ));
+
+      var cameraFOVY = 75;
+      TW.cameraSetup(renderer, scene,
+                     {minx: -10, maxx: 10,
+                      miny: -10, maxy: 40,
+                      minz: -10, maxz: 10},
+                     cameraFOVY);
+
+      TW.render();
+      </script>
+
+
+    </p>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="about">
+    <p>
+    </p>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="about">
+    <p>
+    </p>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="about">
+    <p>
+    </p>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="about">
+    <p>
+    </p>
+  </div>
+
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sky</h3>
+    <p>The background of the scene is mainly composed of the sky and a sun which sits to the left of the
+      Eiffel Tower. This sky is adapted from the three.js example found here:
+      <a href="https://threejs.org/examples/?q=sky#webgl_shaders_sky">Sky Shader</a> and
+      <a href="https://github.com/mrdoob/three.js/blob/master/examples/webgl_shaders_sky.html">Sky Shader Code</a>.
+      Adapting this code was quite difficult as we had to make sure that we had all the features that came in the code
+      and also make sure the code is compatible with the rest of our code, especially when it came time to combine the background and the tower.
+    <p>Our background went through four iterations of changes before we arrived at our final scene. The first iteration
+      mainly consisted of the trying to adapt the code of the tower to the code for the shader.The second iteration was the animation of the sun.
+      Our idea was to have the sun start in the left corner above the horizon and travel across
+      the screen until it set. This iteration started off with the animation style that we saw in class. The style of the code
+      was based off this example: <a href="https://cs.wellesley.edu/~cs307/lectures/13-exercises/moveCube.html"> Moving Cube</a>.
+      However this did not work, so we tried to use a while loop that would remove the sun, adjust the position and rerender until
+      the sun was below y = 5000. This attempt was the closest attempt as the console.log would print the y position of the sun
+      which was shown to be decreasing and stopping once reaching 5000, yet the actual sun in the scene was not moving.
+      <br>
+      <img src="iter1.png" alt="iteration1" width=800px align="middle">
+      <br>
+      <p>So then we moved onto the third iteration. In this iteration, we went back to the original source code we adapted and
+      created a gui control where the user can choose between three different types of day: noon, sunset, night. However,
+      this was not the best way of creating the overall scene we had in mind.
+      <br>
+      Noon: <img src="iter2_noon.png" alt="noon" width = 800px><br><br>
+      Sunset: <img src="iter2_sunset.png" alt="sunset" width = 800px><br><br>
+      Night:<img src="iter2_night.png" alt="night" width = 800px><br><br>
+    <p>Finally, on the fourth iteration, we were able to create the scene. We used the GUI features again and added if statements
+      within the gui function to check for when the sun was below the horizon. Once the scene was dark, the lights would turn on.
+      <br>
+      Before: <img src="iter3_before.png" alt="before" width = 800px><br><br>
+      Sunset: <img src="iter3_middle.png" alt="middle" width = 800px><br><br>
+      Night: <img src="iter3_after.png" alt="after" width = 800px><br><br>
+    </p>
+  </div>
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Main Graphics Concepts Used</h3>
+
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="eiffel tower.png"  style="width:350px;height:300px;">
+      <h3>Hierarchical Modeling</h3>
+      <p class="w3-opacity">Graphics Concept #1</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="sky.png"  style="width:350px;height:300px;">
+      <h3>Material, Lighting, Shading</h3>
+      <p class="w3-opacity">Graphics Concept #2</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="bezier.png"  style="width:350px;height:300px;">
+      <h3>Curved Lines and Surfaces</h3>
+      <p class="w3-opacity">Graphics Concept #4</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="white-lights.png"  style="width:350px;height:300px;">
+      <h3>Animation</h3>
+      <p class="w3-opacity">Graphics Concept #8</p>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="user-interaction.png"  style="width:350px;height:300px;">
+      <h3>User Interaction</h3>
+      <p class="w3-opacity">Graphics Concept #7</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="shot1.png"  style="width:350px;height:300px;">
+      <h3>Sunset Screenshot</h3>
+      <p class="w3-opacity"></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="shot2.png"  style="width:350px;height:300px;">
+      <h3>Different Angle</h3>
+      <p class="w3-opacity"></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="shot3.png"  style="width:350px;height:300px;">
+      <h3>Tower at Night</h3>
+      <p class="w3-opacity"></p>
+    </div>
+  </div>
+
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>This page template is sourced from: <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
