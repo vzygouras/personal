@@ -302,7 +302,7 @@ header.masthead {
   background-color: #bf94e4; }
   .btn-primary.focus, .btn-primary:focus {
     color: white;
-    border-color: #a4270d;
+    border-color: #bf94e4;
     background-color: #eb3812; }
   .btn-primary:hover {
     color: white;
@@ -318,8 +318,8 @@ header.masthead {
     .open > .btn-primary.dropdown-toggle:focus,
     .open > .btn-primary.dropdown-toggle:hover {
       color: white;
-      border-color: #a4270d;
-      background-color: #c93110; }
+      border-color: #bf94e4;
+      background-color: #155412; }
   .btn-primary.active, .btn-primary:active,
   .open > .btn-primary.dropdown-toggle {
     background-image: none; }
