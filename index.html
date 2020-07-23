@@ -85,7 +85,30 @@
         </div>
       </div>
       <div class="container">
-         <p>Wellesley College</p>
+        
+        
+        /* Create three equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        </style>
+        </head>
+        <body>
+
+        
+        <div class="row">
+          <div class="column" style="background-color:#aaa;">
+            <p>Wellesley College</p>
         <ul>
             <li>Machine Learning</li>
             <li>Data Structures</li>
@@ -99,18 +122,30 @@
             <li>Applied Data Analysis and Statistical Inference</li>
             <li>Computer Graphics</li>
         </ul>  
-        
-         <p>Massachusetts Institute of Technology</p>
+            
+          </div>
+          <div class="column" style="background-color:#bbb;">
+             <p>Massachusetts Institute of Technology</p>
          <ul>
             <li>Artifical Intelligence 6.034</li>
             <li>Research at MIT Sloan 15.URG</li>
             <li>Research at MIT Media Lab MAS.URG</li>
         </ul>  
-         <p>American College of Greece-Athens</p>
+          </div>
+          <div class="column" style="background-color:#ccc;">
+             <p>American College of Greece-Athens</p>
         <ul>
             <li>Relational Database Management Systems</li>
             <li>Big Data and Data Mining</li>
         </ul>  
+          </div>
+        </div>
+
+
+         
+        
+        
+        
     
       </div>
     </section>
